@@ -1,0 +1,21 @@
+.YearChooser-select {
+    color: black;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    width: 125px;
+    height: 25px;
+    outline:none;
+  }
+  
+  .yearChooser {
+    position: relative;
+    display: inline-block;
+    left: 700px;
+    top: -50px;
+  
+  }
+
+ 
+  

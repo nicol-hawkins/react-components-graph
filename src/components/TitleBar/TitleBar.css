@@ -1,0 +1,25 @@
+
+
+h1 {
+  display:block;
+  margin: 3px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 35pt;
+  color: white;
+  -webkit-text-fill-color: var(--lgtpink);
+  -webkit-text-stroke-width: 1.2px;
+  
+}
+
+.output {
+  -webkit-text-fill-color: var(--darkgrn);
+  -webkit-transition-duration: 1s; 
+  transition-duration: 1s;
+}
+
+.output:hover {
+  -webkit-text-fill-color: rgb(226, 200, 188);
+  -webkit-transition-duration: 1s; 
+  transition-duration: 1s;
+
+}

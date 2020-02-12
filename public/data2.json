@@ -1,0 +1,436 @@
+{ 
+    "2010": [
+        { 
+            "Country": "Argentina", 
+            "Percentage": 10.44,
+            "Year": 2010
+        },
+        { 
+            "Country": "Bolivia", 
+            "Percentage": 51.62,
+            "Year": 2010 
+        },
+        { 
+            "Country": "Brazil", 
+            "Percentage": 59.51,
+            "Year": 2010
+        },
+        { 
+            "Country":"Chile", 
+            "Percentage": 22.23,
+            "Year": 2010 
+        },
+        { 
+            "Country":"Colombia", 
+            "Percentage": 52.82,
+            "Year": 2010 
+        },
+        { 
+            "Country":"Ecuador", 
+            "Percentage": 52.10,
+            "Year": 2010 
+        },
+        { 
+            "Country":"Guyana", 
+            "Percentage": 84.20,
+            "Year": 2010 
+        },
+        { 
+            "Country":"Paraguay", 
+            "Percentage": 42.66,
+            "Year": 2010 
+        },
+        { 
+            "Country":"Peru", 
+            "Percentage": 58.44,
+            "Year": 2010
+        },
+        { 
+            "Country":"Suriname", 
+            "Percentage": 98.40,
+            "Year": 2010 
+        },
+        { 
+            "Country":"Uruguay", 
+            "Percentage": 9.89,
+            "Year": 2010 
+        },
+        { 
+            "Country":"Venezuela", 
+            "Percentage": 53.85,
+            "Year": 2010 
+        }
+    ],
+    "2011": [
+        { 
+            "Country": "Argentina", 
+            "Percentage": 10.34,
+            "Year": 2011 
+        },
+        { 
+            "Country": "Bolivia", 
+            "Percentage": 51.62,
+            "Year": 2011 
+        },
+        { 
+            "Country": "Brazil", 
+            "Percentage": 59.51,
+            "Year": 2011 
+        },
+        { 
+            "Country":"Chile", 
+            "Percentage": 22.23,
+            "Year": 2011
+        },
+        { 
+            "Country":"Colombia", 
+            "Percentage": 52.82,
+            "Year": 2011 
+        },
+        { 
+            "Country":"Ecuador", 
+            "Percentage": 51.79,
+            "Year": 2011 
+        },
+        { 
+            "Country":"Guyana", 
+            "Percentage": 84.15,
+            "Year": 2011 
+        },
+        { 
+            "Country":"Paraguay", 
+            "Percentage": 41.84,
+            "Year": 2011 
+        },
+        { 
+            "Country":"Peru", 
+            "Percentage": 58.31,
+            "Year": 2011 
+        },
+        { 
+            "Country":"Suriname", 
+            "Percentage": 98.37,
+            "Year": 2011 
+        },
+        { 
+            "Country":"Uruguay", 
+            "Percentage": 10.02,
+            "Year": 2011 
+        },
+        { 
+            "Country":"Venezuela", 
+            "Percentage": 53.67,
+            "Year": 2011 
+        }
+    ],
+    "2012": [
+        { 
+            "Country": "Argentina", 
+            "Percentage": 10.23,
+            "Year": 2012 
+        },
+        { 
+            "Country": "Bolivia", 
+            "Percentage": 51.35,
+            "Year": 2012 
+        },
+        { 
+            "Country": "Brazil", 
+            "Percentage": 59.40,
+            "Year": 2012 
+        },
+        { 
+            "Country":"Chile", 
+            "Percentage": 22.63,
+            "Year": 2012 
+        },
+        { 
+            "Country":"Colombia", 
+            "Percentage": 52.80,
+            "Year": 2012 
+        },
+        { 
+            "Country":"Ecuador", 
+            "Percentage": 51.47,
+            "Year": 2012 
+        },
+        { 
+            "Country":"Guyana", 
+            "Percentage": 84.10,
+            "Year": 2012 
+        },
+        { 
+            "Country":"Paraguay", 
+            "Percentage": 41.02,
+            "Year": 2012
+        },
+        { 
+            "Country":"Peru", 
+            "Percentage": 58.18,
+            "Year": 2012 
+        },
+        { 
+            "Country":"Suriname", 
+            "Percentage": 98.35,
+            "Year": 2012 
+        },
+        { 
+            "Country":"Uruguay", 
+            "Percentage": 10.15,
+            "Year": 2012 
+        },
+        { 
+            "Country":"Venezuela", 
+            "Percentage": 53.48,
+            "Year": 2012 
+        }
+    ],
+    "2013": [
+        { 
+            "Country":"Argentina", 
+            "Percentage": 10.12,
+            "Year": 2013 
+        },
+        { 
+            "Country":"Bolivia", 
+            "Percentage": 51.08,
+            "Year": 2013  
+        },
+        { 
+            "Country":"Brazil", 
+            "Percentage": 59.28,
+            "Year": 2013  
+        },
+        { 
+            "Country":"Chile", 
+            "Percentage": 23.04,
+            "Year": 2013  
+        },
+        { 
+            "Country":"Colombia", 
+            "Percentage": 52.77,
+            "Year": 2013  
+        },
+        { 
+            "Country":"Ecuador", 
+            "Percentage": 51.15,
+            "Year": 2013  
+        },
+        { 
+            "Country":"Guyana", 
+            "Percentage": 84.05,
+            "Year": 2013  
+        },
+        { 
+            "Country":"Paraguay", 
+            "Percentage": 40.20,
+            "Year": 2013  
+        },
+        { 
+            "Country":"Peru", 
+            "Percentage": 58.05,
+            "Year": 2013  
+        },
+        { 
+            "Country":"Suriname", 
+            "Percentage": 98.33,
+            "Year": 2013  
+        },
+        { 
+            "Country":"Uruguay", 
+            "Percentage": 10.28,
+            "Year": 2013  
+        },
+        { 
+            "Country":"Venezuela", 
+            "Percentage": 53.29,
+            "Year": 2013  
+        } 
+    ],
+    "2014": [
+        { 
+            "Country":"Argentina", 
+            "Percentage": 10.01,
+            "Year": 2014  
+        },
+        { 
+            "Country":"Bolivia", 
+            "Percentage": 50.81,
+            "Year": 2014 
+        },
+        { 
+            "Country":"Brazil", 
+            "Percentage": 59.16,
+            "Year": 2014 
+        },
+        { 
+            "Country":"Chile", 
+            "Percentage": 23.44,
+            "Year": 2014 
+        },
+        { 
+            "Country":"Colombia", 
+            "Percentage": 52.75,
+            "Year": 2014 
+        },
+        { 
+            "Country":"Ecuador", 
+            "Percentage": 50.83,
+            "Year": 2014 
+        },
+        { 
+            "Country":"Guyana", 
+            "Percentage": 84.00,
+            "Year": 2014 
+        },
+        { 
+            "Country":"Paraguay", 
+            "Percentage": 39.38,
+            "Year": 2014
+        },
+        { 
+            "Country":"Peru", 
+            "Percentage": 57.92,
+            "Year": 2014 
+        },
+        { 
+            "Country":"Suriname", 
+            "Percentage": 98.30,
+            "Year": 2014 
+        },
+        { 
+            "Country":"Uruguay", 
+            "Percentage": 10.41,
+            "Year": 2014 
+        },
+        { 
+            "Country":"Venezuela", 
+            "Percentage": 53.11,
+            "Year": 2014 
+        } 
+    ],
+    "2015": [
+        { 
+            "Country":"Argentina", 
+            "Percentage": 9.90,
+            "Year": 2015 
+        },
+        { 
+            "Country":"Bolivia", 
+            "Percentage": 50.55,
+            "Year": 2015  
+        },
+        { 
+            "Country":"Brazil", 
+            "Percentage": 59.04,
+            "Year": 2015  
+        },
+        { 
+            "Country":"Chile", 
+            "Percentage": 23.85,
+            "Year": 2015  
+        },
+        { 
+            "Country":"Colombia", 
+            "Percentage": 52.72,
+            "Year": 2015  
+        },
+        { 
+            "Country":"Ecuador", 
+            "Percentage": 50.52,
+            "Year": 2015  
+        },
+        { 
+            "Country":"Guyana", 
+            "Percentage": 83.95,
+            "Year": 2015  
+        },
+        { 
+            "Country":"Paraguay", 
+            "Percentage": 38.56,
+            "Year": 2015  
+        },
+        { 
+            "Country":"Peru", 
+            "Percentage": 57.79,
+            "Year": 2015 
+        },
+        { 
+            "Country":"Suriname", 
+            "Percentage": 98.28,
+            "Year": 2015  
+        },
+        { 
+            "Country":"Uruguay", 
+            "Percentage": 10.54,
+            "Year": 2015  
+        },
+        { 
+            "Country":"Venezuela", 
+            "Percentage": 52.92,
+            "Year": 2015  
+        }
+    ],
+    "2016": [
+        { 
+            "Country":"Argentina", 
+            "Percentage": 9.79,
+            "Year": 2016 
+        },
+        { 
+            "Country":"Bolivia", 
+            "Percentage": 50.28,
+            "Year": 2016 
+        },
+        { 
+            "Country":"Brazil", 
+            "Percentage": 58.93,
+            "Year": 2016 
+        },
+        { 
+            "Country":"Chile", 
+            "Percentage": 24.25,
+            "Year": 2016 
+        },
+        { 
+            "Country":"Colombia", 
+            "Percentage": 52.70,
+            "Year": 2016 
+        },
+        { 
+            "Country":"Ecuador", 
+            "Percentage": 50.20,
+            "Year": 2016 
+        },
+        { 
+            "Country":"Guyana", 
+            "Percentage": 83.90,
+            "Year": 2016 
+        },
+        { 
+            "Country":"Paraguay", 
+            "Percentage": 37.74,
+            "Year": 2016 
+        },
+        { 
+            "Country":"Peru", 
+            "Percentage": 57.66,
+            "Year": 2016 
+        },
+        { 
+            "Country":"Suriname", 
+            "Percentage": 98.25,
+            "Year": 2016 
+        },
+        { 
+            "Country":"Uruguay", 
+            "Percentage": 10.67,
+            "Year": 2016 
+        },
+        { 
+            "Country":"Venezuela", 
+            "Percentage": 52.73,
+            "Year": 2016 
+        }
+    ]
+}
