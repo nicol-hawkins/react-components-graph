@@ -2,13 +2,12 @@
 import React, { Component } from 'react';
 import './App.css';
 
+//import components
 import SelectYear from './components/SelectYear/SelectYear.js';
-import Buttons from './components/Buttons/Buttons.js';
+import CountryButtons from './components/CountryButtons/CountryButtons.js';
 import BarChart from './components/BarChart/BarChart.js';
 import TitleBar from './components/TitleBar/TitleBar.js';
 import RemoveButton from './components/RemoveButton/RemoveButton.js';
-
-console.log('4_react_components')
 
 
 class App extends Component {
@@ -28,30 +27,26 @@ class App extends Component {
   componentDidMount() {
     fetch('./data2.json')
     .then(response => response.json())
-    .then((result, value) => {
-        console.log("Object.values(result):",Object.values(result))
+    .then((result) => {
         this.setState({
           data: result,
           year: '2016',  
           availableCountries: result,
-        });
-        console.log('Total Available countries: ', result[this.state.year] );
-        console.log('Object Keys: ', Object.keys(result));
-        console.log('Chosen countries: ', result[value] )       
-      },
+        });      
+      }
     )
-  }
+  };
 
+//Update the year state using onUpdateYear method
 onUpdateYear = (ev) => {
   let year = ev.target.value;
     this.setState({
-        year: year,
-        },
-        () => console.log('Year Chosen: ',this.state.year, 'Available countries: ', this.state.data[this.state.year]))
-    }
+      year: year,
+    })
+  };
 
 
-
+//Update state of chosenCountries array
   onChooseCountry = (info, index) => {
     const chosenCountries = this.state.chosenCountries.slice();
     const availableCountries = this.state.data[this.state.year].slice();
@@ -59,12 +54,9 @@ onUpdateYear = (ev) => {
 
     chosenCountries.push(chosenCountry);
     availableCountries.splice(index, 1)
-
     chosenCountries.sort((a, b) => (a.label > b.label) ? 1 : -1);
-
-    console.log('Year: ', this.state.year, 'Chosen countries: ', this.state.chosenCountries)
-
-    this.setState ({
+    
+    this.setState({
       chosenCountries: chosenCountries,
       availableCountries: availableCountries,
       counter: this.state.counter + 1,
@@ -72,19 +64,15 @@ onUpdateYear = (ev) => {
 
   };
   
-  
+//Update State of availableCountries by removing chosenCountires 
   removeCountry = (index) => {
     const chosenCountries = this.state.chosenCountries.slice();
     const availableCountries = this.state.availableCountries.slice();
-    
     const chosenCountry = chosenCountries[index];
 
     availableCountries.push(chosenCountry);
     chosenCountries.splice(index, 1);
-
     availableCountries.sort((a, b) => (a.label > b.label) ? 1 : -1);
-
-    console.log('Available countries', availableCountries)
     
     this.setState({
       availableCountries: availableCountries,
@@ -93,65 +81,52 @@ onUpdateYear = (ev) => {
 
   };
   
-
 render() {
-  
   return (
-    
-  <div className="App">
-    <div className="TitleBar">
 
-      <TitleBar
-        currentYear={this.state.year}/>
-
-      <SelectYear
+    <div className="App">
+      <div className="TitleBar">
+        <TitleBar
         onChange={this.onUpdateYear}
         currentYear={this.state.year}
-        id="select"
-        value={this.state.year}>
-      </SelectYear>
-
-    </div>
+        year={this.state.year}>
+          <SelectYear
+            onChange={this.onUpdateYear}
+            currentYear={this.state.year}
+            value={this.state.year}>
+          </SelectYear>
+        </TitleBar>
+      </div>
           
-       
-
       <section className="MainContainer">
         <div className="CountryCheckbox">
           {this.state.data[this.state.year] ?
             this.state.data[this.state.year].map((info, index) => (
-              <Buttons
-              onClick={() => this.onChooseCountry(info, index)}
-              text={info.Country}>
-                {info.Country}
-              </Buttons>
+              <CountryButtons
+                onClick={() => this.onChooseCountry(info, index)}
+                text={info.Country}>
+                  {info.Country}
+              </CountryButtons>
             )) : "NO DATA"
-        }
-        </div>
-
-        <div className="BarChart" id="results">
-          {this.state.chosenCountries.map((info, index) => (
-            <BarChart 
-              className="bar--show bar" 
-              info={info}>
-                    <RemoveButton
-                      onClick={() => this.removeCountry(index)}>
-                    </RemoveButton>
-            </BarChart>
-            
-            
-            ))
-            
           }
-          </div>
-         
-    </section>       
-  </div>
-
-    
+        </div>
+        <div className="BarChart" id="results">
+            {this.state.chosenCountries.map((info, index) => (
+              <BarChart 
+                className="bar--show bar" 
+                info={info}>
+                  <RemoveButton
+                    onClick={() => this.removeCountry(index)}>
+                  </RemoveButton>
+              </BarChart>
+              ))
+            }
+        </div>
+      </section>       
+    </div>
+  
   );
-}
-
-
+ }
 }
 
 export default App;

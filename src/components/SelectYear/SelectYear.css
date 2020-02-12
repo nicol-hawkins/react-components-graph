@@ -1,21 +1,29 @@
+.YearChooser {
+  position: relative;
+  display: inline-block;
+  bottom: -1px;
+
+}
+
 .YearChooser-select {
-    color: black;
-    padding: 16px;
-    font-size: 16px;
+    color: white;
+    font-weight: bold;
+    background-color: var(--darkgrn);
+    font-family: 'Roboto', sans-serif;
+    -webkit-text-fill-color: var(--darkgrn);
+    -webkit-text-stroke-width: 1.2px;
+    padding: 5px;
+    font-size: 35pt;
     border: none;
     cursor: pointer;
-    width: 125px;
-    height: 25px;
-    outline:none;
+    width: 150px;
+    height: 46px;
+    outline: none;
+    
   }
+
   
-  .yearChooser {
-    position: relative;
-    display: inline-block;
-    left: 700px;
-    top: -50px;
-  
-  }
+ 
 
  
   

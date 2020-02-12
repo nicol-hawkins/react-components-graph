@@ -5,20 +5,17 @@ import './TitleBar.css';
 class TitleBar extends Component {
  render() {
   
-
- 
     return (      
 
-          <div className="test">
-          <h1>Percentage of Forest Land in <br></br>South American Countries: 
-            <span 
-            className="output"
-            year={this.props.year}
-            onChange={this.props.onChange}
-            > 
-           {this.props.children}
-           {this.props.year}
-            </span> 
+        <div className="test">
+          <h1>Percentage of Forest Land in <br></br>South American Countries:  
+            {/* <span 
+              className="output"
+              currentYear={this.props.year}
+              onChange={this.props.onChange}> 
+                  {this.props.year}
+            </span>  */}
+            {this.props.children}
           </h1>
         </div>        
     );

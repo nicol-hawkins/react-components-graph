@@ -1,5 +1,4 @@
 
-
 h1 {
   display:block;
   margin: 3px;
@@ -8,18 +7,13 @@ h1 {
   color: white;
   -webkit-text-fill-color: var(--lgtpink);
   -webkit-text-stroke-width: 1.2px;
+  text-shadow: 2px 2px #00000065;
   
 }
 
 .output {
   -webkit-text-fill-color: var(--darkgrn);
-  -webkit-transition-duration: 1s; 
-  transition-duration: 1s;
+  padding-left: 10px;
+    
 }
 
-.output:hover {
-  -webkit-text-fill-color: rgb(226, 200, 188);
-  -webkit-transition-duration: 1s; 
-  transition-duration: 1s;
-
-}

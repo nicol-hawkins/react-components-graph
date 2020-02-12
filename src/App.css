@@ -8,7 +8,6 @@
 
 }
 
-
 .App {
   background: url("./tree_bark.png");
 }
@@ -28,6 +27,7 @@
   font-size: 1.8em;
   align-items: middle;
   border-bottom-left-radius: 15px;
+
 }
 
 .MainContainer {
@@ -36,7 +36,6 @@
   background: url("./tree_bark.png");
   height: 80vh;
 
-  
 }
 
 .CountryCheckbox {
@@ -56,8 +55,6 @@
     
 }
 
-
-
 .BarChart {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -65,6 +62,7 @@
   align-items: end;
   position: relative;
   box-sizing: border-box;
+  
 }
 
 
