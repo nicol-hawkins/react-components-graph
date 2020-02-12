@@ -6,11 +6,13 @@ class RemoveButton extends Component {
     let className = 'remove-btn';
 
 return (
+  
      <button
       className={className} 
       onClick={this.props.onClick}>
         remove
     </button>
+ 
  
     );
   }

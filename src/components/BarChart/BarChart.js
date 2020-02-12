@@ -11,6 +11,7 @@ return (
       style={{height: this.props.info.Percentage + "%"}}>
       <h3>{this.props.info.Country}, {this.props.info.Year} </h3>
       <h4>{this.props.info.Percentage} %</h4>
+      {this.props.children}
     </div>
     );
   }

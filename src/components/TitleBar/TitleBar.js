@@ -16,6 +16,7 @@ class TitleBar extends Component {
             year={this.props.year}
             onChange={this.props.onChange}
             > 
+           {this.props.children}
            {this.props.year}
             </span> 
           </h1>

@@ -132,18 +132,18 @@ render() {
           {this.state.chosenCountries.map((info, index) => (
             <BarChart 
               className="bar--show bar" 
-              info={info}
-              
-              >
-
-                <RemoveButton
-                  onClick={() => this.removeCountry(index)}>
-                </RemoveButton>
-              
+              info={info}>
+                    <RemoveButton
+                      onClick={() => this.removeCountry(index)}>
+                    </RemoveButton>
             </BarChart>
+            
+            
             ))
+            
           }
           </div>
+         
     </section>       
   </div>
 

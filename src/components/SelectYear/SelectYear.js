@@ -20,6 +20,7 @@ class SelectYear extends Component {
           <option value="2011">2011</option>
           <option value="2010">2010</option>
         </select>
+        {this.props.children}
         
       </div>
     );
