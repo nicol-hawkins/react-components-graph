@@ -29,7 +29,7 @@ h3 {
     width: 8vw;
     background-color: var(--darkgrn);
     color: white;
-    padding-bottom: 4vh;
+   
     padding-top: 1vh;
     font-size: large;
     text-align: center;
@@ -46,7 +46,7 @@ h3 {
   
   .BarChart-Bar:hover {
     transition: .5s;
-    padding-bottom: 60px;
+    padding-bottom: 1.5vh;
   }
 
 

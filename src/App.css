@@ -66,9 +66,9 @@
 }
 
 
-@media screen and (max-width: 1581px) {
-  .Country-Button {
-    font-size: 1em;
+@media screen and (max-width: 1300px) {
+  .CountryCheckbox {
+    margin-top: -60px;
 
   } 
 
