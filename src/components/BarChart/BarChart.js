@@ -8,7 +8,7 @@ class BarChart extends Component {
 return (
     <div 
       className={className}
-      style={{height: this.props.info.Percentage + "%"}}>
+      style={{height: this.props.info.Percentage - 10 + "%" }}>
       <h3>{this.props.info.Country}, {this.props.info.Year} </h3>
       <h4>{this.props.info.Percentage} %</h4>
       {this.props.children}
