@@ -4,7 +4,7 @@
     font-size: 1em;
     margin-top: 10px;
     background-color: rgb(255, 252, 252);
-    border-radius: 15px;
+    border-radius: 7px;
     box-shadow: 0 6px #999;
     outline:none;
     transition: all .2s ease-in-out;
@@ -22,3 +22,13 @@
     transition: .5s;
     transform: scale(1.05);
   }
+
+  @media screen and (max-width: 1300px) {
+    .remove-btn {
+      font-size: .85em;
+  
+    }   
+  
+  }
+  
+  
