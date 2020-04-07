@@ -50,7 +50,7 @@ h3 {
   }
 
 
-  @media screen and (max-width: 1581px) {
+  @media screen and (max-width: 1500px) {
     .BarChart-Bar {
       width: 12vw;
     }

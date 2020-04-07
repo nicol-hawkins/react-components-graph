@@ -27,3 +27,12 @@
   }
 
 
+  @media screen and (max-width: 1300px) {
+    .Country-Button {
+      font-size: 1em;
+  
+    } 
+
+  
+  
+  }
