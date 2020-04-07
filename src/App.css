@@ -66,6 +66,17 @@
 }
 
 
+@media screen and (max-width: 1581px) {
+  .Country-Button {
+    font-size: 1em;
 
+  } 
+
+  .TitleBar {
+   height: 24vh;
+  }
+
+
+}
 
 
