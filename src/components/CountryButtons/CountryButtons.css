@@ -1,27 +1,26 @@
   
-  .btn-primary {
-  background-color: rgb(255, 252, 252); 
-  border-radius: 15px;
-  color: rgba(73, 72, 72, 0.973);
-  border-width: 1.5px;
-  margin-top: -65px;
-  padding: 5px 5px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 20px;
-  -webkit-transition-duration: 0.4s; 
-  transition-duration: 0.4s;
-  transition: all .5s ease-in-out;
+  .Country-Button {
+    background-color: rgb(255, 252, 252); 
+    border-radius: 15px;
+    color: rgba(73, 72, 72, 0.973);
+    border-width: 1.5px;
+    margin-bottom: 4vh;
+    padding: 5px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.5em;
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
   }
   
-  .btn-primary:hover {
+  .Country-Button:hover {
   background-color: rgb(226, 200, 188);
   color: rgba(56, 56, 56, 0.973);
   transform: scale(1.009);
   }
   
-  .btn-primary:focus {
+  .Country-Button:focus {
   background-color: rgb(226, 200, 188);
   outline:none;
   

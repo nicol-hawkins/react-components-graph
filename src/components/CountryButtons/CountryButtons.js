@@ -4,19 +4,17 @@ import './CountryButtons.css';
 class CountryButtons extends Component {
   render() {
 
-    let className = 'btn-primary';
+    let className = 'Country-Button';
 
 return (
  
-
     <div 
       className={className} 
       onClick={this.props.onClick}
-  >
+      >
         {this.props.children}
     </div>
  
-
     );
   }
 }

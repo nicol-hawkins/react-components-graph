@@ -1,7 +1,7 @@
 .remove-btn {
     font-family: 'Roboto', sans-serif;
     border-style: solid black 1px;
-    font-size: medium;
+    font-size: 1em;
     margin-top: 10px;
     background-color: rgb(255, 252, 252);
     border-radius: 15px;

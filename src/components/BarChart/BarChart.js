@@ -3,7 +3,7 @@ import './BarChart.css';
 
 class BarChart extends Component {
   render() {
-    let className = 'bar--show bar';
+    let className = 'BarChart-Bar';
 
 return (
     <div 

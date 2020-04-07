@@ -22,14 +22,15 @@ h3 {
     display: none;
   }
   
-  .bar--show {
+  .BarChart-Bar{
     display: block;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
-    width: 230px;
+    width: 8vw;
     background-color: var(--darkgrn);
     color: white;
-    padding-bottom: 50px;
+    padding-bottom: 4vh;
+    padding-top: 1vh;
     font-size: large;
     text-align: center;
     font-family: 'Roboto', sans-serif;
@@ -39,11 +40,11 @@ h3 {
                 min-height .5s;       
   }
   
-  .bar:nth-child(odd) {
+  .BarChart-Bar:nth-child(odd) {
     background-color: var(--teal);
   }
   
-  .bar:hover {
+  .BarChart-Bar:hover {
     transition: .5s;
     padding-bottom: 60px;
   }

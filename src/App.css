@@ -13,20 +13,18 @@
 }
 
 .TitleBar {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
   box-sizing: border-box;
   padding-left: 5vw;
-  padding-top: 5px;
-  margin-top: 0px;
-  padding-bottom: 5px;
-  color: white;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
   background: var(--darkgrn);
   opacity: .9;
   height: 20vh;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
   font-size: 1.8em;
   align-items: middle;
-  border-bottom-left-radius: 15px;
+  border-radius: 15px;
 
 }
 
@@ -57,11 +55,13 @@
 
 .BarChart {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(12, 1fr);
   grid-gap: 5px;
   align-items: end;
-  position: relative;
+  position: absolute;
+  bottom: 0px;
   box-sizing: border-box;
+  height: 69vh;
   
 }
 
