@@ -28,8 +28,7 @@ h3 {
     border-top-right-radius: 15px;
     width: 8vw;
     background-color: var(--darkgrn);
-    color: white;
-   
+    color: white; 
     padding-top: 1vh;
     font-size: large;
     text-align: center;
@@ -53,6 +52,7 @@ h3 {
   @media screen and (max-width: 1500px) {
     .BarChart-Bar {
       width: 12vw;
+      padding-top: 0vh;
     }
   
   }
