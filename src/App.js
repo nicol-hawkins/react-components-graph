@@ -23,7 +23,7 @@ class App extends Component {
     };
 };
 
-  //fetch the data
+  //Fetch the data
   componentDidMount() {
     fetch('./data2.json')
     .then(response => response.json())
@@ -37,12 +37,24 @@ class App extends Component {
     )
   };
 
+// onUpdatePercentage = () => {
+//   let chosenCountries = this.state.data[this.state.year]
+//   this.setState({
+//     chosenCountries: this.state.chosenCountries
+
+//   })
+//   console.log('onUpdatePercetage called')
+// }
+
 //Update the year state using onUpdateYear method
 onUpdateYear = (ev) => {
   let year = ev.target.value;
+  // this.onUpdatePercentage();
     this.setState({
       year: year,
+      chosenCountries: this.state.data[this.state.year]
     })
+    console.log(this.state.chosenCountries)
   };
 
 
@@ -120,6 +132,7 @@ render() {
                   </RemoveButton>
               </BarChart>
               ))
+              
             }
         </div>
       </section>       
