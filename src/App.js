@@ -59,7 +59,7 @@ onUpdateYear = (ev) => {
 
 
 //Update state of chosenCountries array
-  onChooseCountry = (info, index) => {
+  onChooseCountry = (index) => {
     const chosenCountries = this.state.chosenCountries.slice();
     const availableCountries = this.state.data[this.state.year].slice();
     const chosenCountry = availableCountries[index];
