@@ -15,7 +15,7 @@ class App extends Component {
     super(props);
   
     this.state = {
-      year: '2016',
+      year: null,
       counter: 0,
       data:[],
       chosenCountries: [],
@@ -37,18 +37,20 @@ class App extends Component {
     )
   };
 
-// onUpdatePercentage = () => {
-//   let chosenCountries = this.state.data[this.state.year]
-//   this.setState({
-//     chosenCountries: this.state.chosenCountries
-
-//   })
-//   console.log('onUpdatePercetage called')
-// }
+onUpdatePercentage = (info, Percentage) => {
+  let chosenCountries = Object.assign({}, this.state.chosenCountries)
+  chosenCountries.info.Percentage = this.state.data[this.state.year]
+  this.setState({
+    chosenCountries: chosenCountries
+  });
+  console.log('onUpdatePercetage called')
+}
 
 //Update the year state using onUpdateYear method
 onUpdateYear = (ev) => {
   let year = ev.target.value;
+  // let chosenCountries = Object.assign({}, this.state.chosenCountries);
+  // chosenCountries.Percentage = this.state.data[this.state.year]
   // this.onUpdatePercentage();
     this.setState({
       year: year,
@@ -59,7 +61,7 @@ onUpdateYear = (ev) => {
 
 
 //Update state of chosenCountries array
-  onChooseCountry = (index) => {
+  onChooseCountry = (info, index) => {
     const chosenCountries = this.state.chosenCountries.slice();
     const availableCountries = this.state.data[this.state.year].slice();
     const chosenCountry = availableCountries[index];
@@ -73,6 +75,7 @@ onUpdateYear = (ev) => {
       availableCountries: availableCountries,
       counter: this.state.counter + 1,
     });
+    console.log(this.state.chosenCountries)
 
   };
   
@@ -95,7 +98,6 @@ onUpdateYear = (ev) => {
   
 render() {
   return (
-
     <div className="App">
       <div className="TitleBar">
         <TitleBar
