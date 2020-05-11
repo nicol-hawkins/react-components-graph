@@ -2,7 +2,6 @@
 import React, { Component } from 'react';
 import './App.css';
 
-//import components
 import SelectYear from './components/SelectYear/SelectYear.js';
 import CountryButtons from './components/CountryButtons/CountryButtons.js';
 import BarChart from './components/BarChart/BarChart.js';
@@ -47,7 +46,7 @@ onUpdatePercentage = (info, Percentage) => {
 }
 
 //Update the year state using onUpdateYear method
-onUpdateYear = (ev) => {
+onUpdateYear = (ev, info) => {
   let year = ev.target.value;
   // let chosenCountries = Object.assign({}, this.state.chosenCountries);
   // chosenCountries.Percentage = this.state.data[this.state.year]
@@ -56,7 +55,7 @@ onUpdateYear = (ev) => {
       year: year,
       chosenCountries: this.state.data[this.state.year]
     })
-    console.log(this.state.chosenCountries)
+    console.log('Chosen Countries for', this.state.year, ':', this.state.chosenCountries)
   };
 
 
