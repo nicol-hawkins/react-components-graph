@@ -15,42 +15,31 @@ class App extends Component {
   
     this.state = {
       year: null,
-      counter: 0,
-      data:[],
+      data: [],
       chosenCountries: [],
       availableCountries: [],
+      isVisible: false
     };
+
+    this.onToggleCountry = this.onToggleCountry.bind(this);
 };
 
   //Fetch the data
   componentDidMount() {
     fetch('./data2.json')
     .then(response => response.json())
-    .then((result) => {
+    .then((data) => {
         this.setState({
-          data: result,
-          year: '2016',  
-          availableCountries: result,
+          data: data,
+          year: '2016'
         });      
       }
     )
   };
 
-onUpdatePercentage = (info, Percentage) => {
-  let chosenCountries = Object.assign({}, this.state.chosenCountries)
-  chosenCountries.info.Percentage = this.state.data[this.state.year]
-  this.setState({
-    chosenCountries: chosenCountries
-  });
-  console.log('onUpdatePercetage called')
-}
-
 //Update the year state using onUpdateYear method
 onUpdateYear = (ev, info) => {
   let year = ev.target.value;
-  // let chosenCountries = Object.assign({}, this.state.chosenCountries);
-  // chosenCountries.Percentage = this.state.data[this.state.year]
-  // this.onUpdatePercentage();
     this.setState({
       year: year,
       chosenCountries: this.state.data[this.state.year]
@@ -60,40 +49,30 @@ onUpdateYear = (ev, info) => {
 
 
 //Update state of chosenCountries array
-  onChooseCountry = (info, index) => {
-    const chosenCountries = this.state.chosenCountries.slice();
-    const availableCountries = this.state.data[this.state.year].slice();
-    const chosenCountry = availableCountries[index];
-
-    chosenCountries.push(chosenCountry);
-    availableCountries.splice(index, 1)
-    chosenCountries.sort((a, b) => (a.label > b.label) ? 1 : -1);
-    
+  onToggleCountry = (info) => {   
     this.setState({
-      chosenCountries: chosenCountries,
-      availableCountries: availableCountries,
-      counter: this.state.counter + 1,
+      isVisible: !this.state.isVisible,
+
     });
-    console.log(this.state.chosenCountries)
 
   };
   
 //Update State of availableCountries by removing chosenCountires 
-  removeCountry = (index) => {
-    const chosenCountries = this.state.chosenCountries.slice();
-    const availableCountries = this.state.availableCountries.slice();
-    const chosenCountry = chosenCountries[index];
+  // removeCountry = (index) => {
+  //   const chosenCountries = this.state.chosenCountries.slice();
+  //   const availableCountries = this.state.availableCountries.slice();
+  //   const chosenCountry = chosenCountries[index];
 
-    availableCountries.push(chosenCountry);
-    chosenCountries.splice(index, 1);
-    availableCountries.sort((a, b) => (a.label > b.label) ? 1 : -1);
+  //   availableCountries.push(chosenCountry);
+  //   chosenCountries.splice(index, 1);
+  //   availableCountries.sort((a, b) => (a.label > b.label) ? 1 : -1);
     
-    this.setState({
-      availableCountries: availableCountries,
-      chosenCountries: chosenCountries
-    });
+  //   this.setState({
+  //     availableCountries: availableCountries,
+  //     chosenCountries: chosenCountries
+  //   });
 
-  };
+  // };
   
 render() {
   return (
@@ -116,7 +95,7 @@ render() {
           {this.state.data[this.state.year] ?
             this.state.data[this.state.year].map((info, index) => (
               <CountryButtons
-                onClick={() => this.onChooseCountry(info, index)}
+                onClick={() => this.onToggleCountry(info, index)}
                 text={info.Country}>
                   {info.Country}
               </CountryButtons>
@@ -124,17 +103,16 @@ render() {
           }
         </div>
         <div className="BarChart" id="results">
-            {this.state.chosenCountries.map((info, index) => (
+          {
+            this.state.isVisible && <BarChart></BarChart>
+          }
+            {/* {this.state.data.map((info, index) => (
               <BarChart 
                 className="bar--show bar" 
                 info={info}>
-                  <RemoveButton
-                    onClick={() => this.removeCountry(index)}>
-                  </RemoveButton>
               </BarChart>
-              ))
-              
-            }
+            ))
+             } */}
         </div>
       </section>       
     </div>
