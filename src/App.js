@@ -9,6 +9,12 @@ import TitleBar from './components/TitleBar/TitleBar.js';
 import RemoveButton from './components/RemoveButton/RemoveButton.js';
 
 
+//When year is selected, event handler calls api and filters response for selected year in the menu.
+//Remove fetch from componentDidMount
+//Look into toggle instead of chosen/remove country
+
+//api response returns array of objects
+
 class App extends Component {
   constructor(props){
     super(props);
@@ -17,6 +23,7 @@ class App extends Component {
       year: null,
       counter: 0,
       data:[],
+      //empty object maybe?
       chosenCountries: [],
       availableCountries: [],
     };
@@ -31,26 +38,15 @@ class App extends Component {
           data: result,
           year: '2016',  
           availableCountries: result,
-        });      
+        });  
+        console.log(result)    
       }
     )
   };
 
-onUpdatePercentage = (info, Percentage) => {
-  let chosenCountries = Object.assign({}, this.state.chosenCountries)
-  chosenCountries.info.Percentage = this.state.data[this.state.year]
-  this.setState({
-    chosenCountries: chosenCountries
-  });
-  console.log('onUpdatePercetage called')
-}
-
 //Update the year state using onUpdateYear method
 onUpdateYear = (ev, info) => {
   let year = ev.target.value;
-  // let chosenCountries = Object.assign({}, this.state.chosenCountries);
-  // chosenCountries.Percentage = this.state.data[this.state.year]
-  // this.onUpdatePercentage();
     this.setState({
       year: year,
       chosenCountries: this.state.data[this.state.year]
@@ -92,6 +88,7 @@ onUpdateYear = (ev, info) => {
       availableCountries: availableCountries,
       chosenCountries: chosenCountries
     });
+    console.log(availableCountries)
 
   };
   
@@ -132,8 +129,7 @@ render() {
                     onClick={() => this.removeCountry(index)}>
                   </RemoveButton>
               </BarChart>
-              ))
-              
+              ))              
             }
         </div>
       </section>       
