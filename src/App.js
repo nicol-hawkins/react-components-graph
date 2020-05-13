@@ -50,13 +50,13 @@ onUpdateYear = (ev, info) => {
 
 //Update state of chosenCountries array
   onToggleCountry = (info, index) => {   
-    const chosenCountries = this.state.chosenCountries  
-    const chosenCountry = chosenCountries[index];
-    chosenCountries.push(chosenCountry);
-    console.log('Chosen Country: ', chosenCountry)
+    // const chosenCountries = this.state.chosenCountries  
+    // const chosenCountry = chosenCountries[index];
+    // chosenCountries.push(chosenCountry);
+    // console.log('Chosen Country: ', chosenCountry)
     this.setState({
       isVisible: !this.state.isVisible,
-      chosenCountries: chosenCountries
+      // chosenCountries: chosenCountries
 
     });
 
@@ -110,11 +110,13 @@ render() {
         <div className="BarChart" id="results">
           {
             this.state.isVisible && (
-            this.state.data[this.state.year] ?
-            this.state.data[this.state.year].map((info, index) => (
-              <BarChart
-              info={info}></BarChart>
-            )) : "NO DATA"
+              this.state.data[this.state.year] ?
+              this.state.data[this.state.year].map((info, index) => (
+                <BarChart
+                  className="bar--show bar"
+                  info={info}>
+                </BarChart>
+              )) : "NO DATA"
             )
           }
             {/* {this.state.data.map((info, index) => (
