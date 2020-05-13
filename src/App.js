@@ -42,25 +42,47 @@ onUpdateYear = (ev, info) => {
   let year = ev.target.value;
     this.setState({
       year: year,
-      chosenCountries: this.state.data[this.state.year]
+      // chosenCountries: this.state.data[this.state.year]
     })
     console.log('Chosen Countries for', this.state.year, ':', this.state.chosenCountries)
   };
 
 
 //Update state of chosenCountries array
-  onToggleCountry = (info, index) => {   
-    // const chosenCountries = this.state.chosenCountries  
-    // const chosenCountry = chosenCountries[index];
-    // chosenCountries.push(chosenCountry);
-    // console.log('Chosen Country: ', chosenCountry)
+  onToggleCountry = (data, index) => {   
+    const chosenCountries = this.state.chosenCountries  
+    const chosenCountry = data.Country;
+    chosenCountries.push(chosenCountry);
+
+    console.log('Current Chosen: ', chosenCountry)
+    console.log('List of Chosen: ', chosenCountries)
+    
     this.setState({
       isVisible: !this.state.isVisible,
-      // chosenCountries: chosenCountries
+      data: this.state.data,
+      chosenCountries: this.state.chosenCountries
 
     });
 
   };
+
+  // onChooseCountry = (info, index) => {
+  //   const chosenCountries = this.state.chosenCountries.slice();
+  //   const availableCountries = this.state.data[this.state.year].slice();
+  //   const chosenCountry = availableCountries[index];
+
+  //   chosenCountries.push(chosenCountry);
+  //   availableCountries.splice(index, 1)
+  //   chosenCountries.sort((a, b) => (a.label > b.label) ? 1 : -1);
+    
+  //   this.setState({
+  //     chosenCountries: chosenCountries,
+  //     availableCountries: availableCountries,
+  //     counter: this.state.counter + 1,
+  //   });
+  //   console.log(this.state.chosenCountries)
+
+  // };
   
 //Update State of availableCountries by removing chosenCountires 
   // removeCountry = (index) => {
@@ -126,6 +148,8 @@ render() {
               </BarChart>
             ))
              } */}
+
+             {/* if this.state.chosenCountires ===  info.Country */}
         </div>
       </section>       
     </div>
