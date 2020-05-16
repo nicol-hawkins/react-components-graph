@@ -1,0 +1,25 @@
+{
+    "Frankenstein": {
+        "author": "Mary Shelley",
+        "releaseDate": 1818,
+        "cover": "https://i.imgur.com/uNMghlM.jpg"
+    },
+    "The Last Man": {
+        "author": "Mary Shelley",
+        "releaseDate": 1826,
+        "cover": "https://i.imgur.com/ceHXmU3.jpg"
+    },
+    "The Time Machine": {
+        "author": "H.G. Wells",
+        "releaseDate": 1895,
+        "cover": "https://i.imgur.com/spJBN7n.jpg"
+    }
+}
+
+{
+    "Argentina": {
+        "Country": "Argentina",
+        "Percentage": 10.44,
+        "Year": 2010
+    }
+}

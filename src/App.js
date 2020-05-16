@@ -21,7 +21,7 @@ class App extends Component {
       isVisible: false
     };
 
-    this.onToggleCountry = this.onToggleCountry.bind(this);
+    // this.onToggleCountry = this.onToggleCountry.bind(this);
 };
 
   //Fetch the data
@@ -49,23 +49,47 @@ onUpdateYear = (ev, info) => {
 
 
 //Update state of chosenCountries array
-  onToggleCountry = (data, index) => {   
-    const chosenCountries = this.state.chosenCountries  
-    const chosenCountry = data.Country;
-    chosenCountries.push(chosenCountry);
+  // onToggleCountry = (data, index) => {   
+  //   const chosenCountries = this.state.chosenCountries  
+  //   const chosenCountry = data.Country;
+  //   chosenCountries.push(chosenCountry);
 
-    console.log('Current Chosen: ', chosenCountry)
-    console.log('List of Chosen: ', chosenCountries)
+  //   console.log('Current Chosen: ', chosenCountry)
+  //   console.log('List of Chosen: ', chosenCountries)
     
+  //   this.setState({
+  //     isVisible: !this.state.isVisible,
+  //     data: this.state.data,
+  //     chosenCountries: this.state.chosenCountries
+
+  //   });
+
+  // };
+
+  onToggleCountry = (indexOfCountry, data) => {
+    const chosenCountries = this.state.chosenCountries.slice(); // duplicate chosenCountries array
+    // const chosenCountry = data.Country
+    // Check if the chosenCountries array is listing this message as starred
+    if (chosenCountries.includes(indexOfCountry)) {
+        // Presently starred, remove from array
+        // (This is the way you remove a particular value from an array in
+        // JavaScript, sadly there is no "remove" method.)
+        chosenCountries.splice(chosenCountries.indexOf(indexOfCountry), 1);
+
+    } else {
+        // Not presently starred, add to array
+        chosenCountries.push(chosenCountries);
+    }
+
+    // Finally, set the state with the new chosenCountries
     this.setState({
-      isVisible: !this.state.isVisible,
-      data: this.state.data,
-      chosenCountries: this.state.chosenCountries
-
+        chosenCountries: chosenCountries,
+        isVisible: !this.state.isVisible
     });
+    console.log(chosenCountries)
+}
 
-  };
-
+  // OLD METHOD FOR CHOOSING COUNTRY
   // onChooseCountry = (info, index) => {
   //   const chosenCountries = this.state.chosenCountries.slice();
   //   const availableCountries = this.state.data[this.state.year].slice();
@@ -84,7 +108,7 @@ onUpdateYear = (ev, info) => {
 
   // };
   
-//Update State of availableCountries by removing chosenCountires 
+  //OLD METHOD FOR REMOVING COUNTRY 
   // removeCountry = (index) => {
   //   const chosenCountries = this.state.chosenCountries.slice();
   //   const availableCountries = this.state.availableCountries.slice();
@@ -106,9 +130,9 @@ render() {
     <div className="App">
       <div className="TitleBar">
         <TitleBar
-        onChange={this.onUpdateYear}
-        currentYear={this.state.year}
-        year={this.state.year}>
+          onChange={this.onUpdateYear}
+          currentYear={this.state.year}
+          year={this.state.year}>
           <SelectYear
             onChange={this.onUpdateYear}
             currentYear={this.state.year}
@@ -130,9 +154,11 @@ render() {
           }
         </div>
         <div className="BarChart" id="results">
-          {
+
+          {/* **LOOPS THROUGH TOO MUCH DATA, BUT UPDATES CORRECT VALUES** */}
+          {/* {
             this.state.isVisible && (
-              this.state.data[this.state.year] ?
+              this.state.chosenCountries ?
               this.state.data[this.state.year].map((info, index) => (
                 <BarChart
                   className="bar--show bar"
@@ -140,7 +166,24 @@ render() {
                 </BarChart>
               )) : "NO DATA"
             )
+          } */}
+
+          {/* **LOOPING THROUGH OBJECT WITH OBJECT.ENTRIES** */}
+          {
+            this.state.isVisible && (
+              Object.entries(this.state.data).map(([year, info]) => (
+                year === this.state.year ? (
+                  <BarChart
+                    className="bar--show bar"
+                    info={info}>
+                  </BarChart>
+                ) : null
+              ))
+            )
           }
+
+
+          {/* OLD LOOP FOR BARS */}
             {/* {this.state.data.map((info, index) => (
               <BarChart 
                 className="bar--show bar" 
@@ -149,7 +192,15 @@ render() {
             ))
              } */}
 
-             {/* if this.state.chosenCountires ===  info.Country */}
+
+
+             {/* **PSEUDOCODE** */}
+             {/* for country in chosenCountries:
+             if chosenCountry === info.Country
+             <BarChart>
+             </BarChart> */}
+
+             {/* if this.state.chosenCountries[index] === info.Country */}
         </div>
       </section>       
     </div>
