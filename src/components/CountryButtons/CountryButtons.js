@@ -11,6 +11,7 @@ return (
     <div 
       className={className} 
       onClick={this.props.onClick}
+      // onCountryToggle={() => this.onToggleCountry(info, index)}
       >
         {this.props.children}
     </div>

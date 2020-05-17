@@ -66,7 +66,7 @@ onUpdateYear = (ev, info) => {
 
   // };
 
-  onToggleCountry = (indexOfCountry, data) => {
+  onToggleCountry = (indexOfCountry) => {
     const chosenCountries = this.state.chosenCountries.slice(); // duplicate chosenCountries array
 
     // Check if the chosenCountries array is listing this country as chosen
