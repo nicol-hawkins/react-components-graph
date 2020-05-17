@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import './CountryButtons.css';
+import './CountryButton.css';
 
-class CountryButtons extends Component {
+class CountryButton extends Component {
   render() {
 
     let className = 'Country-Button';
@@ -20,4 +20,4 @@ return (
   }
 }
 
-export default CountryButtons;
+export default CountryButton;

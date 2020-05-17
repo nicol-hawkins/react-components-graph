@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './ButtonArea.css';
 
-import CountryButtons from '../CountryButtons/CountryButtons';
+import CountryButtons from '../CountryList/CountryList';
 
 class ButtonArea extends Component {
   render() {

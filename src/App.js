@@ -3,10 +3,11 @@ import React, { Component } from 'react';
 import './App.css';
 
 import SelectYear from './components/SelectYear/SelectYear.js';
-import CountryButtons from './components/CountryButtons/CountryButtons.js';
+import CountryButton from './components/CountryList/CountryList';
 import BarChart from './components/BarChart/BarChart.js';
 import TitleBar from './components/TitleBar/TitleBar.js';
 import RemoveButton from './components/RemoveButton/RemoveButton.js';
+import CountryList from './components/CountryList/CountryList';
 
 
 class App extends Component {
@@ -109,17 +110,14 @@ render() {
       </div>
           
       <section className="MainContainer">
-        <div className="CountryCheckbox">
-          {this.state.data[this.state.year] ?
-            this.state.data[this.state.year].map((info, index) => (
-              <CountryButtons
-                onClick={() => this.onToggleCountry(info, index)}
-                text={info.Country}>
-                  {info.Country}
-              </CountryButtons>
-            )) : "NO DATA"
-          }
-        </div>
+
+        <CountryList
+          data={this.state.data}
+          year={this.state.year}
+          >
+          
+          </CountryList>
+        
         <div className="BarChart" id="results">
 
           {/* **LOOPS THROUGH TOO MUCH DATA, BUT UPDATES CORRECT VALUES** */}
