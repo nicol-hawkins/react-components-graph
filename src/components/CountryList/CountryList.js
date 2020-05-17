@@ -11,8 +11,10 @@ class CountryList extends Component {
         {this.props.data[this.props.year] ?
           this.props.data[this.props.year].map((info, index) => (
             <CountryButton
-              onClick={() => this.onToggleCountry(info, index)}
-              text={info.Country}>
+              onToggleCountry={() => this.props.onToggleCountry(info, index)}
+              text={info.Country}
+              key={index}
+              >
                 {info.Country}
             </CountryButton>
           )) : "NO DATA"

@@ -67,7 +67,7 @@ onUpdateYear = (ev, info) => {
 
   // };
 
-  onToggleCountry = (indexOfCountry) => {
+  toggleCountry = (indexOfCountry) => {
     const chosenCountries = this.state.chosenCountries.slice(); // duplicate chosenCountries array
 
     // Check if the chosenCountries array is listing this country as chosen
@@ -87,8 +87,8 @@ onUpdateYear = (ev, info) => {
         chosenCountries: chosenCountries,
         isVisible: !this.state.isVisible
     });
-    console.log(chosenCountries)
-    console.log(indexOfCountry)
+    console.log('Chosen Countries: ', chosenCountries)
+    console.log('Index of Country: ',  indexOfCountry)
 }
 
   
@@ -107,16 +107,13 @@ render() {
             value={this.state.year}>
           </SelectYear>
         </TitleBar>
-      </div>
-          
+      </div>         
       <section className="MainContainer">
-
         <CountryList
           data={this.state.data}
           year={this.state.year}
-          >
-          
-          </CountryList>
+          onToggleCountry={this.toggleCountry} />         
+  
         
         <div className="BarChart" id="results">
 
@@ -141,6 +138,7 @@ render() {
                   <BarChart
                     className="bar--show bar"
                     info={info}>
+                    {console.log("info: ", info.Country)}
                   </BarChart>
                 ) : null
               ))
