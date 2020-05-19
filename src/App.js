@@ -78,7 +78,7 @@ onUpdateYear = (ev, info) => {
         chosenCountries.splice(chosenCountries.indexOf(indexOfCountry), 1);
 
     } else {
-        // Not presently starred, add to array
+        // Not presently chosen, add to array
         chosenCountries.push(chosenCountries);
     }
 
@@ -138,7 +138,7 @@ render() {
                   <BarChart
                     className="bar--show bar"
                     info={info}>
-                    {console.log("info: ", info.Country)}
+                    {console.log("info: ", info, year)}
                   </BarChart>
                 ) : null
               ))
