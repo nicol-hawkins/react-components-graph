@@ -39,13 +39,15 @@ class App extends Component {
   };
 
 //Update the year state using onUpdateYear method
-onUpdateYear = (ev, info) => {
+onUpdateYear = (ev, data) => {
   let year = ev.target.value;
     this.setState({
       year: year,
+      data: data[year]
       // chosenCountries: this.state.data[this.state.year]
     })
     console.log('Chosen Countries for', this.state.year, ':', this.state.chosenCountries)
+    console.log(this.state)
   };
 
 
@@ -67,6 +69,10 @@ onUpdateYear = (ev, info) => {
 
   // };
 
+  //get one entry from the list and use js function in the console.
+  // look into only returning the data for one year initially
+  //data["2010"].filter(name => name.Country === "Bolivia")[0]
+
   toggleCountry = (indexOfCountry) => {
     const chosenCountries = this.state.chosenCountries.slice(); // duplicate chosenCountries array
 
@@ -87,8 +93,13 @@ onUpdateYear = (ev, info) => {
         chosenCountries: chosenCountries,
         isVisible: !this.state.isVisible
     });
-    console.log('Chosen Countries: ', chosenCountries)
+    console.log('Array Chosen Countries: ', this.state.chosenCountries)
     console.log('Index of Country: ',  indexOfCountry)
+    
+    Object.entries(this.state.data).map(([year, info]) => {
+      console.log(year, info)
+    }
+    )
 }
 
   
@@ -137,13 +148,14 @@ render() {
                 year === this.state.year ? (
                   <BarChart
                     className="bar--show bar"
-                    info={info}>
-                    {console.log("info: ", info, year)}
+                    info={info[0]}>                   
                   </BarChart>
                 ) : null
               ))
             )
           }
+
+        {/* { LOOPING THROUGH DATA USING FILTER} */}
 
 
           {/* OLD LOOP FOR BARS */}

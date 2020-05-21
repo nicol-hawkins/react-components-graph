@@ -5,6 +5,7 @@ import CountryButton from '../CountryButton/CountryButton';
 
 class CountryList extends Component {
   render() {
+    
     return (
     
       <div className="CountryCheckbox">
@@ -15,10 +16,12 @@ class CountryList extends Component {
               text={info.Country}
               key={index}
               >
+                {console.log(index)}
                 {info.Country}
             </CountryButton>
           )) : "NO DATA"
         }
+ 
       </div>
 
     );
