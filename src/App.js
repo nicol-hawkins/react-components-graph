@@ -9,7 +9,7 @@ import TitleBar from './components/TitleBar/TitleBar.js';
 import RemoveButton from './components/RemoveButton/RemoveButton.js';
 import CountryList from './components/CountryList/CountryList';
 
-kjhdfkgjhdkhfg
+
 class App extends Component {
   constructor(props){
     super(props);
