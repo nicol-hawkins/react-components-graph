@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react';
 import './App.css';
 
@@ -21,8 +20,6 @@ class App extends Component {
       availableCountries: [],
       isVisible: false
     };
-
-    // this.onToggleCountry = this.onToggleCountry.bind(this);
 };
 
   //Fetch the data
@@ -43,7 +40,7 @@ onUpdateYear = (ev, data) => {
   let year = ev.target.value;
     this.setState({
       year: year,
-      data: data[year]
+      // data: data[year]
       // chosenCountries: this.state.data[this.state.year]
     })
     console.log('Chosen Countries for', this.state.year, ':', this.state.chosenCountries)
@@ -129,20 +126,22 @@ render() {
         <div className="BarChart" id="results">
 
           {/* **LOOPS THROUGH TOO MUCH DATA, BUT UPDATES CORRECT VALUES** */}
-          {/* {
+          {
             this.state.isVisible && (
               this.state.chosenCountries ?
               this.state.data[this.state.year].map((info, index) => (
                 <BarChart
                   className="bar--show bar"
-                  info={info}>
+                  info={info}
+                  data={this.state.data}
+                  year={this.state.year}>
                 </BarChart>
               )) : "NO DATA"
             )
-          } */}
+          }
 
           {/* **LOOPING THROUGH OBJECT WITH OBJECT.ENTRIES** */}
-          {
+          {/* {
             this.state.isVisible && (
               Object.entries(this.state.data).map(([year, info]) => (
                 year === this.state.year ? (
@@ -153,7 +152,7 @@ render() {
                 ) : null
               ))
             )
-          }
+          } */}
 
         {/* { LOOPING THROUGH DATA USING FILTER} */}
 
