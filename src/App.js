@@ -136,7 +136,7 @@ render() {
                   data={this.state.data}
                   year={this.state.year}>
                 </BarChart>
-              )) : "NO DATA"
+              )) : "NO DATA"  
             )
           }
 
